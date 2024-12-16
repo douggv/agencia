@@ -1,0 +1,60 @@
+.card-outline.card-primary {
+    border-color: #FFC5C5; /* Tono de carne claro */
+  }
+  
+  .card-outline.card-primary .card-header {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  
+  .card-outline.card-primary .card-title {
+    color: #333;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #FFD7BE; /* Tono de carne claro y cálido */
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #FFF;
+  }
+  
+  .table-striped tbody tr:hover {
+    background-color: #FFC2C7; /* Tono de carne rosado claro */
+  }
+  
+  .dataTables_wrapper .dataTables_length select {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  
+  .dataTables_wrapper .dataTables_filter input {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  
+  .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #FFC2C7; /* Tono de carne rosado claro */
+  }
+  
+  .dataTables_wrapper .dataTables_info {
+    color: #333;
+  }
+  
+  .dataTables_wrapper .dataTables_processing {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  .dt-button {
+    background-color: #FFC5C5; /* Tono de carne claro */
+    color: #333;
+  }
+  
+  .dt-button:hover {
+    background-color: #FFC2C7; /* Tono de carne rosado claro */
+  }
