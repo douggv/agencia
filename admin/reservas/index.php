@@ -2,6 +2,9 @@
 <?php include '../../admin/layout/parte1.php';?>
 <?php include '../../admin/layout/mensaje.php';?>
 <?php include '../../app/controllers/reservas/lista_reservas.php';?> 
+<?php
+    include "../../app/controllers/correo/enviarCorreo.php";
+?>
 <div class="container-fluid">
 <h1>Listado de Reservas</h1>
 
@@ -16,10 +19,11 @@
                     <thead>
                     <tr>
                         <th style="text-align: center">Nro</th>
-                        <th>Titulo</th>
-                        <th>Fecha de cita</th>
-                        <th>Hora de cita</th>
                         <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Cedula</th>
+                        <th>origen</th>
+                        <th>destino</th>
                         <th>Método de pago</th>
                         <th>Realizado Por</th>
                         <th>Referencia</th>
@@ -33,24 +37,26 @@
                     $contador = 0;
                     foreach ($reservas as $reserva){
                         $contador = $contador + 1;
-                        $id_reserva = $reserva['id'];
+                        $id_reserva = $reserva['id_reserva'];
                         ?>
                         <tr>
                             <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
-                            <td> <?= $reserva['fecha_cita']; ?></td>
-                            <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
-                            <td> <?= $reserva['nombre_pago']; ?></td>
+                            <td> <?= $reserva['nombre']; ?></td>
+                            <td> <?= $reserva['email']; ?></td>
+                            <td> <?= $reserva['cedula']; ?></td>
+                            <td> <?= $reserva['origen']; ?></td>
+                            <td> <?= $reserva['destino']; ?></td>
+                            <td> <?= $reserva['forma_de_pago']; ?></td>
+                            <td> <?= $reserva['persona_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
-                            <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
+                                
+                            <td><img src="<?php echo $URL; ?>/public/images/comprobantes/<?php echo $reserva["imagen2"]; ?>" width="100px" alt="ad"></td>                            
                             <td> <?= $reserva['estado']; ?></td>
 
                             <td style="text-align: center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id'] ?>" class="btn btn-success">Aceptar</a>
-                                    <a href="<?= $URL ?>/admin/reservas/negar.php?id=<?= $reserva['id'] ?>" class="btn btn-danger">Negar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-success">Aceptar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/negar.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-danger">Negar</a>
                                 </div>
                             </td>
                         </tr>

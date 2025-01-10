@@ -1,4 +1,5 @@
 <?php
+    
     include("validacion.php");
 ?>
 <?php // echo $id_usuario_sesion;
@@ -135,25 +136,30 @@
                 </li>
             </ul>
         </li>        
+    
         <li class="nav-item">
-            <a style="background-color: #fff;" href="<?= $URL ?>/admin/servicios" class="nav-link active">
-            <i style="color: black" class="bi bi-airplane-fill"></i>
-                <p style="color: black">
-                Aviones
-                </p>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a style="background-color: #fff;" href="<?= $URL ?>/admin/servicios" class="nav-link active">
+            <a style="background-color: #fff;" href="#" class="nav-link active">
             <i style="color: black" class="bi bi-airplane-engines"></i>
                 <p style="color: black">
-                Vuelos
-                </p>
+              Vuelos
+            </p>
             </a>
-            </li>
+            <ul  class="nav nav-treeview">
+                <li  class="nav-item">
+                <a  href="<?= $URL ?>/admin/vuelos/index.php" class="nav-link">
+                    <p>Ver Vuelos</p>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="<?= $URL ?>/admin/vuelos/create.php" class="nav-link">
+                    <p>Crear Nuevo Vuelo</p>
+                </a>
+                </li>
+            </ul>
+        </li>
 
             <li class="nav-item">
-            <a href="<?= $URL ?>/appcontrollers/login/cerrar_sesion.php" class="nav-link active bg-danger">
+            <a href="<?= $URL ?>/app/controllers/login/cerrar_sesion.php" class="nav-link active bg-danger">
             <i class="bi bi-door-closed-fill"></i>            <p>
                 Cerrar Sesión
                 </p>

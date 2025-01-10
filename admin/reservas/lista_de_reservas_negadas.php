@@ -12,14 +12,15 @@
                 <h3 class="card-title"><b>Reservas Registradas</b></h3>
             </div>
             <div class="card-body">
-                <table id="example1" class="table table-striped table-bordered table-hover">
+            <table id="example1" class="table table-striped table-bordered table-hover">
                     <thead>
                     <tr>
                         <th style="text-align: center">Nro</th>
-                        <th>Titulo</th>
-                        <th>Fecha de cita</th>
-                        <th>Hora de cita</th>
                         <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Cedula</th>
+                        <th>origen</th>
+                        <th>destino</th>
                         <th>Método de pago</th>
                         <th>Realizado Por</th>
                         <th>Referencia</th>
@@ -37,19 +38,21 @@
                         ?>
                         <tr>
                             <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
-                            <td> <?= $reserva['fecha_cita']; ?></td>
-                            <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
-                            <td> <?= $reserva['nombre_pago']; ?></td>
+                            <td> <?= $reserva['nombre']; ?></td>
+                            <td> <?= $reserva['email']; ?></td>
+                            <td> <?= $reserva['cedula']; ?></td>
+                            <td> <?= $reserva['origen']; ?></td>
+                            <td> <?= $reserva['destino']; ?></td>
+                            <td> <?= $reserva['forma_de_pago']; ?></td>
+                            <td> <?= $reserva['persona_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
-                            <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
-                            <td> <?= $reserva['estado']; ?></td>
+
+                            <td><img src="<?php echo $URL; ?>/public/images/comprobantes/<?php echo $reserva["imagen"]; ?>" width="100px" alt="ad"></td>                            <td> <?= $reserva['estado']; ?></td>
 
                             <td style="text-align: center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id'] ?>" class="btn btn-success">Aceptar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-success">Aceptar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/negar.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-danger">Negar</a>
                                 </div>
                             </td>
                         </tr>

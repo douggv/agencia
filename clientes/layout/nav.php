@@ -1,10 +1,7 @@
-
 <?php
-
-include("validacion.php");
-    
+include 'validacion.php';
+include 'cabecera.php';
 ?>
-
 <!doctype html>
 <html lang="es">
     <head>
@@ -16,8 +13,7 @@ include("validacion.php");
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="public/css/home.css">
         <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-        <link href="public/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="public/js/jquery-3.6.4.min.js"></script>
         <!-- jQuery -->
         <script src="<?= $URL ?>/public/template/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
@@ -26,39 +22,43 @@ include("validacion.php");
     
     <body >
         
-        <nav style ="background-color:#ffa6c5" class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img width="80px" src="assets/img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img style="margin-right: 10px" width="60px" src="../assets/img/logo.png" alt="">
+            <a class="navbar-brand" href="<?= $URL ?>/clientes/index.php"><span style="color: red">Finol</span> Travel Agency</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="<?= $URL ?>">Inicio</a>
-                    <a class="nav-link" href="<?php echo $URL ?>/clientes/servicios/index.php">Contacto</a>
-                    <a class="nav-link" href="<?php echo $URL ?>/clientes/servicios/index.php">Servicios</a>
-                    
-                </div>
-                <div style="margin-left: auto;">
-                    <a href="<?= $URL ?>/clientes/perfil/index.php" type="button" style="background-color:#FF69B4; border-color:#FF69B4 " class="btn btn-success mx-2">
-                        <?php echo $email_sesion ?>
-                    </a>
-                    <a href="<?= $URL ?>/app/controllers_clientes/login/cerrar_sesion.php" type="button" class="btn btn-danger ">
-                        Salir
-                    </a>
-                </div>
-
-                </div>
-                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/index.php" style="transition: color 0.2s ease;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/vuelos" style="transition: color 0.2s ease;">Vuelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/notificaciones" style="transition: color 0.2s ease;">Notificaciones</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a style="transition: color 0.2s ease;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul  class="dropdown-menu">
+                            <li><?php echo $email_sesion; ?></li>
+                            <li><a class="dropdown-item" href="<?= $URL ?>/app/controllers_clientes/login/cerrar_sesion.php" style="transition: color 0.2s ease;">Cerrar Sesión</a></li>    
+                        </ul>
+                    </li>
+    
+                </ul>
+    
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <style>
-            body {
-            background-image: url('fondo.jpg');
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center;
-            background-attachment: fixed;
-            }
-        </style>
+    <style>
+        .nav-link:hover, .dropdown-item:hover {
+            color: red;
+        }
+    </style>

@@ -1,6 +1,6 @@
 <?php
 
-include '../../../app/config.php';
+include ('../../../app/config.php');
 include '../../../admin/layout/validacion.php';
 
 $nombre = $_POST['nombre'];
@@ -42,7 +42,7 @@ if($contraseña == $contraseña_verificacion){
         
         if ($query->execute()) {
             // Auditoria
-            $mensaje = "Un usuario ha sido registrado" . " correo: " . $email . "con el rol de " . $rol . " Por Parte de: " .  $nombre_usuario_sesion . " Que es: " . $cargo_usuario_sesion . " y el correo: " . $email_sesion;
+            $mensaje = "Se Registro un usuario" . " correo: " . $email . "con el rol de " . $rol . " Por : " .  $nombre_usuario_sesion . " Que es: " . $cargo_usuario_sesion;
             $sql = "INSERT INTO auditorias (mensaje) VALUES (?)";
             $query = $pdo->prepare($sql);
             $query->bindParam(1, $mensaje, PDO::PARAM_STR);

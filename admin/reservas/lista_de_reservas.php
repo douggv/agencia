@@ -1,32 +1,32 @@
 <?php include '../../app/config.php';?>    
 <?php include '../../admin/layout/parte1.php';?>
 <?php include '../../admin/layout/mensaje.php';?>
-<?php include '../../app/controllers/reservas/lista_reservas_totales.php';?> 
+<?php include '../../app/controllers/reservas/lista_reservas_aceptadas.php';?> 
 <div class="container-fluid">
-<h1>Listado de Reservas</h1>
+<h1>Listado de Reservas Aceptadas</h1>
 
 <div class="row">
     <div class="col-md-12">
         <div class="card card-outline card-primary">
             <div class="card-header">
-                <h3 class="card-title"><b>Reservas Registradas</b></h3>
+                <h3 class="card-title"><b>Reservas Aceptadas</b></h3>
             </div>
             <div class="card-body">
-                <table id="example1" class="table table-striped table-bordered table-hover">
+            <table id="example1" class="table table-striped table-bordered table-hover">
                     <thead>
                     <tr>
                         <th style="text-align: center">Nro</th>
-                        <th>Titulo</th>
-                        <th>Fecha de cita</th>
-                        <th>Hora de cita</th>
                         <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Cedula</th>
+                        <th>origen</th>
+                        <th>destino</th>
                         <th>Método de pago</th>
                         <th>Realizado Por</th>
                         <th>Referencia</th>
                         <th>imagen</th>
                         <th>Estado</th>
-                        <th>Accion</th>
-
+                        <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -38,25 +38,23 @@
                         ?>
                         <tr>
                             <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
-                            <td> <?= $reserva['fecha_cita']; ?></td>
-                            <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
-                            <td> <?= $reserva['nombre_pago']; ?></td>
+                            <td> <?= $reserva['nombre']; ?></td>
+                            <td> <?= $reserva['email']; ?></td>
+                            <td> <?= $reserva['cedula']; ?></td>
+                            <td> <?= $reserva['origen']; ?></td>
+                            <td> <?= $reserva['destino']; ?></td>
+                            <td> <?= $reserva['forma_de_pago']; ?></td>
+                            <td> <?= $reserva['persona_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
-                            <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
+
+                            <td><img src="<?php echo $URL; ?>/public/images/comprobantes/<?php echo $reserva["imagen2"]; ?>" width="100px" alt="ad"></td>                            
                             <td> <?= $reserva['estado']; ?></td>
-                            <form method="POST" action="<?= $URL ?>/app/controllers/reservas/notificacion.php">
-                                <td hidden ><input hidden type="" value = "<?= $reserva['id_usuario'] ?>" name="id_usuario_fk" type="text"></td>
-                                <td hidden ><input name = "fecha_cita" value = "<?= $reserva['fecha_cita']; ?>" type="text"></td>   
-                                <td hidden ><input name = "hora_cita" value = "<?= $reserva['hora_cita']; ?>" type="text"></td>   
-                                <td style="text-align: center">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <input type="submit" value="Enviar notificación" class="btn btn-success">
-                                    </div>
-                            </form>
-                            
+                            <td style="text-align: center">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a href="<?= $URL ?>/app/controllers/reservas/notificacion.php?id=<?= $reserva['id_reserva'] ?>&id_usuario=<?= $reserva['id_usuario'] ?>" class="btn btn-success">Enviar a Correo y perfil</a>
+                                    <a href="<?= $URL ?>/admin/reservas/negar.php?id=<?= $reserva['id_reserva'] ?> &id_usuario=<?= $reserva['id_usuario'] ?>" class="btn btn-danger">Negar</a>
+                                </div>
+                            </td>
                         </tr>
                     <?php
                     }

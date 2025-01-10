@@ -44,7 +44,7 @@
                                 <input class="form-control form-control-rosado" type="email" name="email" placeholder="Ingresa el correo electronico" required>
                             </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Telefono</label>
                                 <input class="form-control form-control-rosado" type="text" name="telefono" placeholder="Ingresa el numero de telefono" minlength="10" maxlength="17">
@@ -53,18 +53,7 @@
                             
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Cargo</label>
-                                <select name="rol" id="" class="form-control form-control-rosado">
-                                    <option value="Cliente">Cliente</option>
-                                    <option value="Peluqero">Peluqera</option>
-                                    <option value="Manicurista">Manicurista</option>
-                                    <option value="Esticista">Esticista</option>
-                                    <option value="Masajista">Masajista</option>
-                                </select>
-                            </div>
-                            </div>
+                            <input value = "cliente" type="hidden" name="rol">
                             <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Contraseña</label>
@@ -83,7 +72,7 @@
                         <div class="row">
                             <div class="col-md-12">
                             <a class="btn btn-secondary w-40" href="index.php">Regresar</a>
-                            <input style="background-color:#FF69B4; border-color:#FF69B4 " type="submit" class="btn btn-success w-40" value="Registrar">
+                            <input  type="submit" class="btn btn-primary w-40" value="Registrar">
                             </div>
                         </div>
                         </form>
@@ -96,19 +85,6 @@
 <?php include '../../admin/layout/parte2.php';?>
 
 <style>
-.form-control-rosado {
-  border: 1px solid #FFC5C5;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.form-control-rosado:focus {
-  border-color: #FF69B4;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-  background-color: #FFF0F0;
-}
 </style>
 

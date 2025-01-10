@@ -4,7 +4,7 @@ $sql = "SELECT *
         FROM reservas 
         INNER JOIN usuarios ON reservas.id_usuario = usuarios.id 
         INNER JOIN vuelos ON reservas.id_vuelo = vuelos.id 
-        WHERE reservas.estado = 'pendiente'";
+        WHERE reservas.estado = 'aceptada'";
         $query = $pdo->prepare($sql);
         $query->execute();
         $reservas = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -26,6 +26,4 @@ $sql = "SELECT *
 
         }
 ?>
-
-
 

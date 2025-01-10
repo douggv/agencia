@@ -1,48 +1,61 @@
 <?php include '../../app/config.php';?>    
 <?php include '../../admin/layout/parte1.php';?>
-<?php include '../../app/controllers/correo/enviarCorreo.php';?>
 <?php include '../../admin/layout/mensaje.php';?>
-<?php include '../../app/controllers/usuarios/listado_de_usuarios.php';?> 
-
+<?php include '../../app/controllers/vuelos/listado_de_vuelos.php';?> 
 <div class="container-fluid">
-    <h1>Listado de Ususarios</h1>   
+    <h1>Listado de vuelos</h1>   
     <div class="row">
         <div class="col-md-12">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
-                            <h3 class="card-title font-weight-bold">Usuarios Registrados</h3>
+                            <h3 class="text-center font-weight-bold text-danger card-title font-weight-bold">Vuelos Registrados</h3>
                     </div>
                     <div class="card-body">
                         <table id="example1" class="table table-responsive table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Nro</th>
-                                    <th>Nombre</th>
-                                    <th>Correo Electronico</th>
-                                    <th>Rol</th>
+                                    <th>#</th>
+                                    <th>Nombre</th> 
+                                    <th>tipo</th>
+                                    <th>Descripcion</th>
+                                    <th>Precio</th>
+                                    <th>fecha de salida</th>
+                                    <th>fecha de regreso</th>
+                                    <th>Aerolinea</th>
+                                    <th>imagen</th>
                                     <th>Acciones</th>
+                                </tr>
+
+
                             </thead>
                             <tbody>
                                 <?php
                                 $contador = 0;
-                                foreach ($usuarios as $usuario) {  
-                                    $contador++; 
-                                    $id_usuario = $usuario['id'];
+                                foreach ($vuelos as $vuelo) {
+                                    $contador++;
+                                    $id_vuelo = $vuelo["id"];
                                     ?>
                                     <tr>
                                         <td><?php echo $contador; ?></td>
-                                        <td><?php echo $usuario['nombre']; ?></td>
-                                        <td><?php echo $usuario['email']; ?></td>
-                                        <td><?php echo $usuario['rol']; ?></td>
+                                        <td><?php echo $vuelo['nombre']; ?></td>
+                                        <td><?php echo $vuelo['tipo']; ?></td>
+                                        <td><?php echo $vuelo['descripcion']; ?></td>
+                                        <td><?php echo $vuelo['precio']; ?></td>
+                                        <td><?php echo $vuelo['fecha_salida']; ?></td>
+                                        <td><?php echo $vuelo['fecha_regreso']; ?></td>
+                                        <td><?php echo $vuelo['aerolinea']; ?></td>
+                                        <td><img src="<?php echo $URL; ?>/public/images/vuelos/<?php echo $vuelo["imagen"]; ?>" width="100px" alt="ad"></td>
                                         <td>
                                           <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a href="nuevo_usuario.php?id=<?php echo $id_usuario ?>" class="btn btn-circle btn-lg btn-success btn-sm">
+                                            <a href="create.php?id=<?php echo $id_vuelo ?>" class="btn btn-circle btn-lg btn-success btn-sm">
                                               <i class="fas fa-search-plus"></i>
                                             </a>
-                                            <a href="actualizar.php?id=<?php echo $id_usuario ?>" class="btn btn-circle btn-lg btn-warning btn-sm">
+                                            <a href="update.php?id=<?php echo $id_vuelo ?>" class="btn btn-circle btn-lg btn-warning btn-sm">
                                               <i class="fas fa-edit"></i>
                                             </a>
-
+                                            <a href="delete.php?id=<?php echo $id_vuelo ?>" class="btn btn-circle btn-lg btn-danger btn-sm">
+                                              <i class="fas fa-trash-alt"></i>
+                                            </a>
                                           </div>
                                         </td>
                                     </tr>
@@ -66,12 +79,12 @@
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Usuarios",
-                "infoEmpty": "Mostrando 0 a 0 de 0 Usuarios",
-                "infoFiltered": "(Filtrado de _MAX_ total Usuarios)",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ vuelo",
+                "infoEmpty": "Mostrando 0 a 0 de 0 vuelo",
+                "infoFiltered": "(Filtrado de _MAX_ total vuelo)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Usuarios",
+                "lengthMenu": "Mostrar _MENU_ vuelo",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",
