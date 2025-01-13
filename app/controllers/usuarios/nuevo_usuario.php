@@ -51,8 +51,8 @@ if($contraseña == $contraseña_verificacion){
             // Envio de  Email
             session_start();
             $_SESSION ["emailEnviar"] = $email;
-            $_SESSION["tituloEmail"] = "Rullier Spa";
-            $_SESSION["mensajeEmail"] = "Saludos " . $nombre ." te damos la Bienvenida a Rullier Spa donde podras ofrecerle a tu cuerpo un tratamiento que te ayudara a mejorar tu salud y tu belleza!!";
+            $_SESSION["tituloEmail"] = "Finol Travel Agency";
+            $_SESSION["mensajeEmail"] = "Saludos " . $nombre ." Bienvenido a Finol Travel Agency donde Tenemos los mejores paquetes y ofertas para que puedas disfrutar de tus viajes soñados. ";
 
 
 
