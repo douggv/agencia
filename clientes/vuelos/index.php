@@ -19,7 +19,7 @@ include '../../app/config.php';
                     <h2 class="card-title"><?php echo $vuelo['nombre']; ?></h2>
                     <p class="card-text"><?php echo $vuelo['descripcion']; ?></p>
                     <p class="card-text">Aerolínea: <?php echo $vuelo['aerolinea']; ?></p>
-                    <p class="card-text">Precio: <?php echo $vuelo['precio']; ?></p>
+                    <p class="card-text">Precio: <?php echo $vuelo['precio']; ?>$</p>
                     <p class = "card-text">fecha de salida: <?php echo $vuelo['fecha_salida']; ?></p>
                     <p class="card-text">
                         <?php if($vuelo['fecha_regreso'] != null) {?>

@@ -17,13 +17,13 @@ if (isset($_SESSION["tituloEmail"])) {
     $mail ->IsSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = "douglasgv0502@gmail.com";
-    $mail->Password = "pune tgzl tosh ddlf";
+    $mail->Username = "natalyurribarri23@gmail.com";
+    $mail->Password = "vdzj mbuo ynxl iemc";
     $mail->SMTPSecure = "ssl";
     $mail->Port = 465;
 
-    $mail->setFrom("douglasgv0502@gmail.com");
-    $mail->addAddress("douglasgv0502@gmail.com"); // correo al que enviaremos
+    $mail->setFrom("natalyurribarri23@gmail.com");
+    $mail->addAddress($email); // correo al que enviaremos
     $mail->isHTML(true);
     $mail->Subject = $titulo;
     $mail->Body = '<h1>'.$mensaje.'</h1>';

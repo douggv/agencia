@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-01-2025 a las 16:38:43
+-- Tiempo de generación: 19-01-2025 a las 22:17:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,36 +32,6 @@ CREATE TABLE `auditorias` (
   `mensaje` text NOT NULL,
   `fecha_creacion` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `auditorias`
---
-
-INSERT INTO `auditorias` (`id`, `mensaje`, `fecha_creacion`) VALUES
-(1, 'Un usuario ha sido registrado correo: jose123@gmail.com', '2024-12-07 22:18:24'),
-(2, 'Un usuario ha sido registrado correo: jose1@gmail.com', '2024-12-07 22:22:49'),
-(3, 'Un usuario ha sido registrado correo: douglasgv0502@gmail.com', '2024-12-07 22:24:22'),
-(4, 'Un usuario ha sido registrado correo: douglasgv0502@gmail.com', '2024-12-07 22:35:56'),
-(5, 'Se registro el paquete de forma correcta . Registrado Por: douglasVuelo registrado: Maracaibo Margarita con el precio de: 600', '2025-01-08 23:38:00'),
-(6, 'Se ha actualizado el vuelo de la manera correcta. actualizó el vuelo de: Maracaibo de la manera correcta por: douglas', '2025-01-08 23:38:39'),
-(7, 'Un usuario ha sido registrado correo: pedro@gmail.com', '2025-01-09 01:59:31'),
-(8, 'Se Registro un usuario correo: pedro2@gmaiol.comcon el rol de cliente Por : douglas Que es: agente', '2025-01-09 16:10:00'),
-(9, 'Se Registro un usuario correo: pedrodd2@gmail.comcon el rol de cliente Por : douglas Que es: agente', '2025-01-09 16:10:41'),
-(10, 'Se actualizo el usuario  correo:  por: douglas  correo: douglasgv0502@gmail.com', '2025-01-09 16:11:04'),
-(11, 'Se registro el comun de forma correcta . Registrado Por: douglasVuelo registrado: Maracaibo Margarita con el precio de: 600', '2025-01-09 16:18:51'),
-(12, 'Se ha actualizado el vuelo de la manera correcta. actualizó el vuelo de: Maracaibo de la manera correcta por: douglas', '2025-01-09 16:19:10'),
-(13, 'Se registro el comun de forma correcta . Registrado Por: douglasVuelo registrado: caracas maracaibo con el precio de: 100', '2025-01-09 19:01:24'),
-(14, 'Se registro el paquete de forma correcta . Registrado Por: douglasVuelo registrado: caracas margarita con el precio de: 500', '2025-01-09 19:02:14'),
-(15, 'Se registro el  de forma correcta . Registrado Por: Vuelo registrado:  con el precio de: ', '2025-01-09 19:02:36'),
-(16, 'Se ha realizado una reserva de vuelo', '2025-01-09 21:13:22'),
-(17, 'Se ha realizado una reserva de vuelo', '2025-01-09 23:31:01'),
-(18, 'Se ha realizado una reserva de vuelo', '2025-01-09 23:33:55'),
-(19, 'Se ha realizado una reserva de vuelo', '2025-01-09 23:36:45'),
-(20, 'Se actualizo el usuario  correo:  por: Nataly  correo: douglasgv0502@gmail.com', '2025-01-13 01:20:42'),
-(21, 'Se registro el paquete de forma correcta . Registrado Por: NatalyVuelo registrado: Caracas Madrid con el precio de: 700', '2025-01-13 01:25:34'),
-(22, 'Se ha actualizado el vuelo de la manera correcta. actualizó el vuelo de: Caracas de la manera correcta por: Nataly', '2025-01-13 01:26:04'),
-(23, 'Se ha realizado una reserva de vuelo', '2025-01-13 01:28:13'),
-(24, 'Se ha actualizado el vuelo de la manera correcta. actualizó el vuelo de: Caracas Madrid de la manera correcta por: Nataly', '2025-01-13 01:32:02');
 
 -- --------------------------------------------------------
 
@@ -187,10 +157,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `contrasena`, `cedula`, `edad`, `telefono`, `rol`, `imagen`, `fecha_de_creacion`, `fecha_de_actualizacion`, `token`) VALUES
-(5, 'Nataly', 'Urribarry', 'douglasgv0502@gmail.com', '$2y$10$qR8.8Yhym0zCnmc.pNq31eQEQOHDk4h470iY.B8jAekYVaA29eXbO', 27284908, NULL, '04127122987', 'agente', NULL, '2024-12-07 22:35:56', '2025-01-13 01:19:23', 121166),
+(5, 'Nataly', 'Urribarry', 'natalyurribarri23@gmail.com', '$2y$10$qR8.8Yhym0zCnmc.pNq31eQEQOHDk4h470iY.B8jAekYVaA29eXbO', 27284908, NULL, '04127122987', 'agente', NULL, '2024-12-07 22:35:56', '2025-01-19 20:32:23', 121166),
 (6, 'Maria', 'Perez', 'maria@gmail.com', '$2y$10$kc6zh6F8OW/WOCF0e.xBJeDWDvGeWvmTsuhWz9nPpuj.GAkrjWa5.', 12354515, NULL, '051651516516', 'cliente', NULL, '2025-01-09 01:59:31', '2025-01-12 14:31:08', NULL),
 (7, 'Sergio', 'Rojas', 'sergio@gmaiol.com', '$2y$10$WXv4N8P0m3qnYZVeVdEJ4.7C4xflJsklrXzjWM9z65tdW/QxSQq0W', 11111111, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:00', '2025-01-12 14:31:08', NULL),
-(8, 'pedro', 'gonzalqwwedqeqwez', 'pedro@gmail.com', '$2y$10$uqJ1JysywamcMYTOEMvo9uRr51MZFCIVbnsfFGScNEKIkYSbSx8Di', 12121212, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:41', '2025-01-13 01:20:42', NULL);
+(8, 'nataly', 'Urribarri', 'nataly@gmail.com', '$2y$10$uqJ1JysywamcMYTOEMvo9uRr51MZFCIVbnsfFGScNEKIkYSbSx8Di', 12121212, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:41', '2025-01-18 02:57:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -237,9 +207,9 @@ CREATE TABLE `vuelos` (
 --
 
 INSERT INTO `vuelos` (`id`, `origen`, `destino`, `fecha_salida`, `fecha_regreso`, `aerolinea`, `nombre`, `descripcion`, `tipo`, `precio`, `imagen`, `puestos_totales`, `puestos_vendidos`) VALUES
-(2, 'maracaibo', 'Margarita', '2025-01-05 17:18:00', '2025-01-29 17:18:00', 'Conviasa', 'Maracaibo', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'comun', 600, '2025-01-09-12-19-10ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 40, 0),
-(3, 'caracas', 'maracaibo', '2025-01-07 20:01:00', '2025-01-22 20:01:00', 'venezolana', 'caracas maracaibo', 'vuelo desde caracas hasta maracaibo', 'comun', 100, '2025-01-09-03-01-23ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
-(4, 'caracas', 'margarita', '2025-01-07 20:01:00', '2025-01-29 20:02:00', 'venezolana', 'caracas margarita', 'vuelo desde caracas hasta margarita ida y vuelta', 'paquete', 500, '2025-01-09-03-02-14ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
+(2, 'maracaibo', 'Margarita', '2025-01-05 17:18:00', '2025-01-29 17:18:00', 'Conviasa', 'Maracaibo Margarita', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'comun', 600, '2025-01-09-12-19-10ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 40, 0),
+(3, 'caracas', 'maracaibo', '2025-01-07 20:01:00', '2025-01-22 20:01:00', 'venezolana', 'Caracas Maracaibo', 'vuelo desde caracas hasta maracaibo', 'comun', 100, '2025-01-09-03-01-23ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
+(4, 'Caracas', 'margarita', '2025-01-07 20:01:00', '2025-01-29 20:02:00', 'venezolana', 'Caracas Margarita', 'vuelo desde caracas hasta margarita ida y vuelta', 'paquete', 500, '2025-01-09-03-02-14ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
 (6, 'Caracas', 'Madrid', '2025-01-14 04:30:00', '2025-01-27 02:29:00', 'Conviasa', 'Caracas Madrid', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'paquete', 700, '2025-01-12-09-25-34ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 80, 20);
 
 --
@@ -315,7 +285,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `auditorias`
 --
 ALTER TABLE `auditorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `avion`
