@@ -10,7 +10,7 @@ include ('../../../app/config.php');
 
 $vuelo_id = $_POST['vuelo_id'];
 
-
+try {
 $sentencia = $pdo->prepare("DELETE FROM vuelos WHERE id = '$vuelo_id' ");
 
 if($sentencia->execute()){
@@ -25,4 +25,9 @@ if($sentencia->execute()){
     header('Location: '.$URL.'/admin/vuelos');
 }
 
-
+} catch (Exception $e) {
+    session_start();
+    $_SESSION['mensaje'] = "error no se pudo eliminar en la base de datos porque hay reservas asociadas";
+    $_SESSION['icono'] = 'error';
+    header('Location: '.$URL.'/admin/vuelos');
+}
