@@ -14,8 +14,8 @@ session_start();
             $nombre_usuario_sesion = $usuario['nombre'];
         }
     }else{
-        echo "no ha pasado por el login";
-        //header(header: "Location: ".$URL."/login.php");
+        
+        header(header: "Location: ".$URL."/login.php");
     }
 
 ?>
