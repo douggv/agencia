@@ -5,7 +5,7 @@
 <?php
 if(isset($_SESSION["email"])) {
     $email = $_SESSION["email"]; 
-    echo $email;
+
     unset($_SESSION["email"]);
 } else {
     header("Location: login.php");
