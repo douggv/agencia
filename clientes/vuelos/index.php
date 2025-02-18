@@ -9,6 +9,8 @@ include '../../app/config.php';
 
 
 <div class="container">
+<p style="font-size: 18px; margin-top: 20px;">¿Necesitas ayuda? <br> Conéctate con nuestro asistente virtual <a href="https://wa.link/nr7smc">aquí</a>!!! Escribele "hola" para comenzar.</p>
+
     <section class="mt-5 d-flex justify-content-center flex-wrap gap-5 align-items-left">
         <?php 
         foreach ($vuelos as $vuelo) {

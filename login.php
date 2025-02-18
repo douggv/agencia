@@ -17,9 +17,10 @@ include "nav.php";
 			<div class="card-header">
 				<h3>Iniciar Sesión</h3>
 				<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="bi bi-instagram"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
+					<a href="https://www.tiktok.com/@finoltravelca?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7465207537647519263" target="_blank"><span><i class="bi bi-tiktok"></i></span></a>
+					<a href="https://www.instagram.com/finoltravelca/" target="_blank"><span><i class="bi bi-instagram"></i></span></a>
+					<a href="https://www.threads.net/@finoltravelca" target="_blank"><span><i class="bi bi-threads"></i></span></a>
+					
 				</div>
 			</div>
 			<div class="card-body">

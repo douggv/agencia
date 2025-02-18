@@ -19,7 +19,7 @@ if (isset($_SESSION["tituloEmail"])) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = "natalyurribarri23@gmail.com";
-        $mail->Password = "vdzj mbuo ynxl iemc";
+        $mail->Password = "vdsq gemb pnig kubs";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 

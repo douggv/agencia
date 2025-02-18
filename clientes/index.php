@@ -57,7 +57,7 @@ include '../app/config.php';
                 <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 20px;">¡Promociones Exclusivas!</h1>
                 <p style="font-size: 24px; margin-bottom: 40px;">¡No te pierdas nuestras ofertas especiales! Regístrate ahora y disfruta de los mejores precios con <span style="color: #c20000;">Finol</span> Travel Agency tus viajes estan garantizados!</p>
                 <center><a style="background-color: #c20000; color: #ffffff;" class="btn" href="vuelos/index.php">Reserva con Finol Travel Agency Ahora!!</a></center>
-                
+                <p style="font-size: 18px; margin-top: 20px;">¿Necesitas ayuda? <br> Conéctate con nuestro asistente virtual <a href="https://wa.link/nr7smc">aquí</a>!!! Escribele "hola" para comenzar.</p>
             </div>
         </div>
 

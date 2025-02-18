@@ -101,17 +101,17 @@
             <ul  class="nav nav-treeview">
                 <li  class="nav-item">
                 <a  href="<?= $URL ?>/admin/reservas" class="nav-link">
-                    <p  >Reservas Pendientes</p>
+                    <p  >Reservas de Vuelos Pendientes</p>
                 </a>
                 </li>
                 <li class="nav-item">
                 <a href="<?= $URL ?>/admin/reservas/lista_de_reservas.php" class="nav-link">
-                    <p>Reservas Aceptadas</p>
+                    <p>Reservas de Vuelos Aceptados</p>
                 </a>
                 </li>
                 <li class="nav-item">
                 <a href="<?= $URL ?>/admin/reservas/lista_de_reservas_negadas.php" class="nav-link">
-                    <p>Reservas Negadas</p>
+                    <p>Reservas de Vuelos Negados</p>
                 </a>
                 </li>
             </ul>
