@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2025 a las 22:17:18
+-- Tiempo de generación: 18-02-2025 a las 04:41:12
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -84,7 +84,8 @@ INSERT INTO `notificacion` (`id_notificacion`, `id_usuario_fk`, `mensaje`, `fech
 (2, NULL, 'Saludos pedro@gmail.com Su Reserva para el vuelo de maracaibo a Margarita ha sido aceptada fecha de salida: 2025-01-05 17:18:00 fecha de regreso: 2025-01-29 17:18:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL),
 (3, 6, 'Saludos pedro@gmail.com Su Reserva para el vuelo de maracaibo a Margarita ha sido aceptada fecha de salida: 2025-01-05 17:18:00 fecha de regreso: 2025-01-29 17:18:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL),
 (4, 6, 'Saludos pedro@gmail.com Su Reserva para el vuelo de caracas a margarita ha sido aceptada fecha de salida: 2025-01-07 20:01:00 fecha de regreso: 2025-01-29 20:02:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL),
-(5, 8, 'Saludos pedro@gmail.com Su Reserva para el vuelo de maracaibo a Margarita ha sido aceptada fecha de salida: 2025-01-05 17:18:00 fecha de regreso: 2025-01-29 17:18:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL);
+(5, 8, 'Saludos pedro@gmail.com Su Reserva para el vuelo de maracaibo a Margarita ha sido aceptada fecha de salida: 2025-01-05 17:18:00 fecha de regreso: 2025-01-29 17:18:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL),
+(6, 13, 'Saludos mario123@gmail.com Su Reserva para el vuelo de caracas a maracaibo ha sido aceptada fecha de salida: 2025-01-07 20:01:00 fecha de regreso: 2025-01-22 20:01:00 por favor no olvide el comprobante de pago adjunto. Gracias', NULL);
 
 -- --------------------------------------------------------
 
@@ -128,7 +129,8 @@ INSERT INTO `reservas` (`id_reserva`, `id_usuario`, `id_vuelo`, `estado`, `fecha
 (2, 6, 4, 'pendiente', '2025-01-09 23:31:01', '2025-01-12 14:48:46', '2025-01-09-07-31-01fotografia-lateral-editor-codigo-que-utiliza-react-js_181624-61842.jpg', '123', 'pago_movil', 'asdasd'),
 (3, 6, 4, 'pendiente', '2025-01-09 23:33:55', '2025-01-12 14:48:46', 'http://localhost/agencia/public/images/comprobantes/2025-01-09-07-33-55fotografia-lateral-editor-codigo-que-utiliza-react-js_181624-61842.jpg', '1234', 'pago_movil', 'asdasd'),
 (4, 6, 2, 'aceptada', '2025-01-09 23:36:45', '2025-01-12 14:50:38', '2025-01-09-07-36-45fotografia-lateral-editor-codigo-que-utiliza-react-js_181624-61842.jpg', '1234', 'Binace', 'asdasd'),
-(5, 8, 2, 'aceptada', '2025-01-13 01:28:13', '2025-01-13 01:28:59', '2025-01-12-09-28-13computadora-portatil-icono-isometrico-codigo-programa-desarrollo-software-aplicaciones-programacion-neon-oscuro_39422-971.avif', '231341', 'zelle', 'pedro');
+(5, 8, 2, 'aceptada', '2025-01-13 01:28:13', '2025-01-13 01:28:59', '2025-01-12-09-28-13computadora-portatil-icono-isometrico-codigo-programa-desarrollo-software-aplicaciones-programacion-neon-oscuro_39422-971.avif', '231341', 'zelle', 'pedro'),
+(6, 13, 3, 'aceptada', '2025-02-18 03:24:16', '2025-02-18 03:25:59', '2025-02-17-11-24-16variedades-de-cebollas.jpg', '1234', 'zelle', 'sadas');
 
 -- --------------------------------------------------------
 
@@ -160,7 +162,8 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `contrasena`, `cedu
 (5, 'Nataly', 'Urribarry', 'natalyurribarri23@gmail.com', '$2y$10$qR8.8Yhym0zCnmc.pNq31eQEQOHDk4h470iY.B8jAekYVaA29eXbO', 27284908, NULL, '04127122987', 'agente', NULL, '2024-12-07 22:35:56', '2025-01-19 20:32:23', 121166),
 (6, 'Maria', 'Perez', 'maria@gmail.com', '$2y$10$kc6zh6F8OW/WOCF0e.xBJeDWDvGeWvmTsuhWz9nPpuj.GAkrjWa5.', 12354515, NULL, '051651516516', 'cliente', NULL, '2025-01-09 01:59:31', '2025-01-12 14:31:08', NULL),
 (7, 'Sergio', 'Rojas', 'sergio@gmaiol.com', '$2y$10$WXv4N8P0m3qnYZVeVdEJ4.7C4xflJsklrXzjWM9z65tdW/QxSQq0W', 11111111, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:00', '2025-01-12 14:31:08', NULL),
-(8, 'nataly', 'Urribarri', 'nataly@gmail.com', '$2y$10$uqJ1JysywamcMYTOEMvo9uRr51MZFCIVbnsfFGScNEKIkYSbSx8Di', 12121212, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:41', '2025-01-18 02:57:53', NULL);
+(8, 'nataly', 'Urribarri', 'nataly@gmail.com', '$2y$10$uqJ1JysywamcMYTOEMvo9uRr51MZFCIVbnsfFGScNEKIkYSbSx8Di', 12121212, NULL, '123213123123', 'cliente', NULL, '2025-01-09 16:10:41', '2025-01-18 02:57:53', NULL),
+(13, 'mario', 'gonzalez', 'mario123@gmail.com', '$2y$10$sXpM5QRDEXGWgSjERA1e/ub2IhuNmB07LSgiSILJ/BmO8eu8mQ4tm', 12312312, NULL, '12312312312', 'cliente', NULL, '2025-02-18 03:20:03', '2025-02-18 03:21:57', 626855);
 
 -- --------------------------------------------------------
 
@@ -207,10 +210,9 @@ CREATE TABLE `vuelos` (
 --
 
 INSERT INTO `vuelos` (`id`, `origen`, `destino`, `fecha_salida`, `fecha_regreso`, `aerolinea`, `nombre`, `descripcion`, `tipo`, `precio`, `imagen`, `puestos_totales`, `puestos_vendidos`) VALUES
-(2, 'maracaibo', 'Margarita', '2025-01-05 17:18:00', '2025-01-29 17:18:00', 'Conviasa', 'Maracaibo Margarita', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'comun', 600, '2025-01-09-12-19-10ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 40, 0),
+(2, 'maracaibo', 'Margarita', '2025-01-05 17:18:00', '2025-01-29 17:18:00', 'Conviasa', 'Maracaibo', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'comun', 605, '2025-01-09-12-19-10ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 40, 0),
 (3, 'caracas', 'maracaibo', '2025-01-07 20:01:00', '2025-01-22 20:01:00', 'venezolana', 'Caracas Maracaibo', 'vuelo desde caracas hasta maracaibo', 'comun', 100, '2025-01-09-03-01-23ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
-(4, 'Caracas', 'margarita', '2025-01-07 20:01:00', '2025-01-29 20:02:00', 'venezolana', 'Caracas Margarita', 'vuelo desde caracas hasta margarita ida y vuelta', 'paquete', 500, '2025-01-09-03-02-14ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0),
-(6, 'Caracas', 'Madrid', '2025-01-14 04:30:00', '2025-01-27 02:29:00', 'Conviasa', 'Caracas Madrid', 'vuelos ida y regreso mas transporte incluido al hotel Ecoland Margarita con ospedaje incluido', 'paquete', 700, '2025-01-12-09-25-34ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 80, 20);
+(4, 'Caracas', 'margarita', '2025-01-07 20:01:00', '2025-01-29 20:02:00', 'venezolana', 'Caracas Margarita', 'vuelo desde caracas hasta margarita ida y vuelta', 'paquete', 500, '2025-01-09-03-02-14ala-avion-puesta-sol-cielo-azul_1150-11083.avif', 50, 0);
 
 --
 -- Índices para tablas volcadas
@@ -303,7 +305,7 @@ ALTER TABLE `hoteles`
 -- AUTO_INCREMENT de la tabla `notificacion`
 --
 ALTER TABLE `notificacion`
-  MODIFY `id_notificacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_notificacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `programas_viajes`
@@ -315,13 +317,13 @@ ALTER TABLE `programas_viajes`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `viajes`
